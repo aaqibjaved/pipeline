@@ -1,0 +1,16 @@
+.banner-container {
+  padding-top: 68px;
+}
+
+::ng-deep {
+  .hamburger-container,
+  .login-btn-container,
+  .search-container {
+    display: none !important;
+  }
+}
+
+button.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}

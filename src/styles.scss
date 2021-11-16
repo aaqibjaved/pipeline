@@ -1,0 +1,16 @@
+@import "../node_modules/font-awesome/css/font-awesome.css";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/@wellmark/wm-lib-ux/assets/wellmark/wm-style";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // font smoothing on mac firefox/chrome
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

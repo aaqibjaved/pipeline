@@ -1,0 +1,54 @@
+<wm-navbar></wm-navbar>
+
+<div class="banner-container">
+  <wm-banner bannerTitle="ACCOUNT LOG IN"></wm-banner>
+</div>
+<div class="container mt-4">
+  <div class="row d-flex flex-column align-items-center">
+    <div class="col-12 mb-5">
+      <p class="mb-4">*Required field</p>
+      <wm-card>
+        <h2 class="my-3">USER LOG IN</h2>
+        <wm-alert
+          [errors]="messageError"
+          [icon]="'icon-exclamation-circle'"
+          title=""
+          [theme]="'warning'"
+        ></wm-alert>
+        <form (ngSubmit)="onLogin()" [formGroup]="form">
+          <wm-field>
+            <label for="email" class="input-label">*User ID or Email</label>
+            <input
+              class="wm-input"
+              type="text"
+              name="user id or email"
+              id="email"
+              formControlName="userId"
+            />
+          </wm-field>
+          <wm-field>
+            <label for="password" class="input-label">*Password</label>
+            <input
+              class="wm-input"
+              type="password"
+              name="password"
+              id="password"
+              formControlName="password"
+            />
+          </wm-field>
+          <wm-field>
+            <a href="javascript:;">USER ID AND PASSWORD HELP</a>
+          </wm-field>
+          <button
+            [disabled]="form.invalid"
+            type="submit"
+            [class.disabled]="form.invalid"
+            class="wm-btn wm-btn-primary"
+          >
+            LOGIN
+          </button>
+        </form>
+      </wm-card>
+    </div>
+  </div>
+</div>
